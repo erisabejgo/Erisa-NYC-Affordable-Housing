@@ -2,7 +2,7 @@
 Name:       Erisa Bejgo
 CS230:      Section  4
 Data:       NY-House-Dataset
-URL:        http://localhost:8501
+URL:        https://erisas-guide-to-affordable-living-in-nyc.streamlit.app
 
 Description:
 This program is for homeowners to look for an apartment/condo/house in NYC.
@@ -88,18 +88,45 @@ st.markdown("<div class= 'spacer'></div>", unsafe_allow_html = True)
 #3RD PICTURE
 st.image("NYC (1).jpg", caption= "NYC Finds: New York County, Bronx County, Queens County, Richmond County, Kings County", use_container_width =True)
 
+st.markdown("<div class= 'spacer'></div>", unsafe_allow_html = True)
 
+st.markdown("""
+    <style>
+        .animated-image {
+            width: 300px;
+            animation: scale 5s infinite alternate;
+        }
 
+        @keyframes scale {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
+        }
 
+        .caption {
+            font-family: Georgia, serif;
+            font-size: 16px;
+            color: #444444;
+            margin-top: 10px;
+        }
+    </style>
+""", unsafe_allow_html=True)  # CHATGPT
 
+# IMPLEMENTING A TRANSITION
+st.markdown("""
+    <div style='text-align: center;'>
+        <img src='https://images.pexels.com/photos/2260784/pexels-photo-2260784.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' class='animated-image'>
+    <p class='caption'></p>
+    </div>
+""", unsafe_allow_html=True)
 
+st.markdown("<div class= 'spacer'></div>", unsafe_allow_html=True)
 
+st.sidebar.title("Tourist Attractions in NYC")
 
+st.sidebar.write("**New York:** Central Park, Times Square, Empire State")
+st.sidebar.write("**Brooklyn:** Brooklyn Bridge, Coney Island, Dumbo")
+st.sidebar.write("**Queens:** Flushing, Astoria, Gantry Plaza")
+st.sidebar.write("**Bronx:** Bronx Zoo, Yankee Stadium, Botanical Garden")
+st.sidebar.write("**Richmond:** Staten Island Ferry, Richmond Town, South Beach")
 
-
-
-
-
-
-
-
+st.sidebar.write("Visit For More Information: https://www.tripadvisor.com/Attraction_Products-g60763-a_contentId.1178676632670054+268263072-New_York_City_New_York.html")
